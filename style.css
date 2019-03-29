@@ -24,7 +24,7 @@
 	text-align:center;
 }
 
-#board{
+#board {
 	text-align: center;
 	display: grid;
 	grid-template-columns: repeat(var(--colNum), 1fr);

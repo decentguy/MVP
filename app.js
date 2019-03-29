@@ -5,6 +5,7 @@ let tiles_flipped = 0;
 let Game = new Object();
 Game.Squares = 0;
 
+
 function myFunction(event) {
 	event.preventDefault();
 	let squares = document.getElementById("skill").value;
