@@ -7,8 +7,17 @@
 	<link rel = "stylesheet" type = "text/css" href = "style.css" />
 	
 </head>
-<body onload="startBoard()">
+<body>
+	<div class="content">
 	<h1 id="header">The Mandarin | 普通话</h1>
+	<div>
+		<form id="squareForm">
+			<div><label for="skill">Skill level</label></div>
+			<div><input type="number" placeholder="Min: 4; Max: 20" name="skill" id="skill"></div>
+			<button onclick="myFunction(event)">Submit</button>
+		</form>
+	</div>
 	<div id="board"></div>
+	</div>
 </body>
 </html>
