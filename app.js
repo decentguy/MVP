@@ -6,7 +6,7 @@ let Game = new Object();
 Game.Squares = 0;
 
 
-function myFunction(event) {
+function loadSkills(event) {
 	event.preventDefault();
 	let squares = document.getElementById("skill").value;
 	Game.Squares = parseInt(squares);
