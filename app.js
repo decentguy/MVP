@@ -10,12 +10,14 @@ function loadSkills(event) {
 	event.preventDefault();
 	let squares = document.getElementById("skill").value;
 	Game.Squares = parseInt(squares);
-	document.documentElement.style.setProperty("--rowNum", Math.ceil(Game.Squares/4));
-	if (Game.Squares > 16){
-		document.documentElement.style.setProperty("--colNum", 5);
-		document.documentElement.style.setProperty("--rowNum", 4);}
-	if (Game.Squares >= 4 && Game.Squares < 21 && Game.Squares % 2 === 0)
+	if (Game.Squares >= 4 && Game.Squares < 21 && Game.Squares % 2 === 0) {
+		document.documentElement.style.setProperty("--rowNum", Math.ceil(Game.Squares / 4));
+		if (Game.Squares > 16) {
+			document.documentElement.style.setProperty("--colNum", 5);
+			document.documentElement.style.setProperty("--rowNum", 4);
+		}
 		startBoard();
+	}
 }
 
 function shuffler(arr) {
