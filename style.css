@@ -1,29 +1,63 @@
+:root {
+	--colNum: 4;
+}
+
+.content {
+	max-width: 960px;
+	margin: auto;
+}
+
+.container {
+	display: grid;
+	grid-template-columns:  100px auto;
+	width: 100%;
+}
+
+#squareForm {
+	padding-right: 100px;
+	margin-right: 100px;
+	width: 100px;
+	padding-top: 25px;
+}
+
 #header{
    text-align: center;
    margin-top: 5px;
    margin-bottom: 5px; 
 }
+
 #board > div{
   	background: url(https://i.imgur.com/3mIrLAj.png) no-repeat;
 	border:#000 5px solid;
 	width:100px;
 	height:100px;
 	float:left;
-	margin:10px;
+	margin:auto;
+	margin-bottom: 15px;
 	padding:20px;
 	font-size:64px;
 	cursor:pointer;
 	text-align:center;
 }
 
-#board{
+#board {
+	text-align: left;
+	display: grid;
+	grid-template-columns: repeat(var(--colNum), 1fr);
+	grid-template-rows: repeat(var(--rowNum), 1fr);
 	background:#fff;
-  	width:680px;
-	height:340px;
+	grid-auto-rows: minmax(340px, auto);
+	grid-auto-columns:  auto;
   	border-radius:10px;
 	border:#000 7px solid;
 	padding:20px;
-	margin: auto;
+	margin: 20px;
+	float: left;
+}
+
+#skill
+{
+	width: 85px;
 }
 
 #board > h1 {
@@ -31,14 +65,18 @@
     text-align: center;
 }
 
-button{
-    background: #fff;
-    border-radius: 10px;
-    border: #000 7px solid;
-    display: block;
-    width: 300px;
-    margin: auto;
-    font-size: 150%;
-    font-weight: 900;
-    padding: 10px;
+form {
+	padding-bottom: 10px;
+}
+
+#resetButton{
+	background: #fff;
+	border-radius: 10px;
+	border: #000 7px solid;
+	display: block;
+	width: 300px;
+	margin: auto;
+	font-size: 150%;
+	font-weight: 900;
+	padding: 10px;
 }
